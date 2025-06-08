@@ -26,7 +26,7 @@ const InputWithLabel = forwardRef<
 
   return (
     <div className={className}>
-      <Label htmlFor={id} className="block font-medium mb-2">
+      <Label htmlFor={id} className="block mb-2">
         {label}
       </Label>
       {type === 'textarea' ? (
