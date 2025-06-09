@@ -47,7 +47,7 @@ export default function Home() {
 
           {/* Label Preview Section */}
           <div className="w-full lg:w-auto ">
-          <h4 className="text-xl font-bold mb-2">Preview</h4>
+          <h4 className="text-xl mb-2">Example Label</h4>
             <ShippingLabel data={shippingData} />
           </div>
         </div>
