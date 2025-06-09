@@ -145,16 +145,20 @@ export default function ShippingForm({ onDataChange, onPrint }: ShippingFormProp
       </div>
 
       {/* Buttons */}
-      <div className="flex gap-2 mt-8 ">
-        <Button onClick={handleShowLabel} >
+      <div className="flex justify-between mt-8 ">
+      <div className="flex">
+          <Button onClick={onReset} variant="ghost">
+              Reset
+          </Button>
+        </div>
+        <div className="flex gap-2">
+        <Button onClick={handleShowLabel} variant="secondary">
             Preview
         </Button>
-        <Button onClick={onPrint} variant="secondary">
+        <Button onClick={onPrint} variant="default">
             Print
         </Button>
-        <Button onClick={onReset} variant="destructive">
-            Reset
-        </Button>
+        </div>
       </div>
     </div>
   );
