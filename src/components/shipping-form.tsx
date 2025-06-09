@@ -37,6 +37,22 @@ export default function ShippingForm({ onDataChange, onPrint }: ShippingFormProp
     onDataChange(formData);
   };
 
+  const onReset = () => {
+      setFormData({
+        sender: '',
+        senderAddress: '',
+        senderPostcode: '',
+        senderPhone: '',
+        receiver: '',
+        receiverAddress: '',
+        receiverPostcode: '',
+        receiverPhone: '',
+        trackingNumber: '',
+        lineUrl: '',
+        showBarcode: false,
+      });
+  };
+
   return (
     <div className="space-y-4">
       <div className="grid gap-4">
@@ -135,6 +151,9 @@ export default function ShippingForm({ onDataChange, onPrint }: ShippingFormProp
         </Button>
         <Button onClick={onPrint} variant="secondary">
             Print
+        </Button>
+        <Button onClick={onReset} variant="destructive">
+            Reset
         </Button>
       </div>
     </div>
